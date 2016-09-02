@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "One-click Kittens",
+    "description": "This extension demonstrates a browser action with kittens.",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*","http://*/*"],
+            "css": ["KittenCss.css"],
+            "js": ["jquery-2.2.4.min.js", "KittenJS.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_popup": "popup.html",
+        "default_title": "Click here!"
+    }
+}
